@@ -10,16 +10,29 @@ var countries = {
 
 };
 
+// 其它
+var others = {
+  "专线": "zx",
+};
+
 var airport = "Texon";
 
 function operator(proxies) {
   proxies.map(res => {
+    var resultArray = [airport];
     Object.keys(countries).forEach((elem, index) => {
       if (res.name.indexOf(elem) != -1) {
-        countries[elem][1] += 1
-        res.name = airport + ' '+countries[elem][0]+' ' + countries[elem][1];
+        countries[elem][1] += 1;
+        resultArray.push(countries[elem][0],countries[elem][1]);
+        console.log(resultArray);
       };
     });
+    Object.keys(others).forEach((elem, index) => {
+      if (res.name.indexOf(elem) != -1) {
+        resultArray.push(others[elem]);
+      };
+    });
+    res.name = resultArray.join(' ');
 })
 return proxies
 }
