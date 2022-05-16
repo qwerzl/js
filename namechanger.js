@@ -4,7 +4,10 @@ var countries = {
   "日本": ["JP", 0],
   "台湾": ["Taiwan", 0],
   "美国": ["US", 0],
-  "韩国": ["Korea", 0]
+  "韩国": ["Korea", 0],
+  "土耳其": ["Turkey", 0],
+  "巴基斯坦": ["Pakistan", 0],
+
 };
 
 var airport = "Texon";
