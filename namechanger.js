@@ -223,7 +223,7 @@ function operator(proxies) {
         console.log(resultArray);
         break;
       };
-    });
+    };
     Object.keys(others).forEach((elem, index) => {
       if (simplify(res.name).indexOf(elem) != -1) {
         resultArray.push(others[elem]);
