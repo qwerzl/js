@@ -1,3 +1,6 @@
+const queryString = window.location.search;
+console.log(queryString);
+
 // countries列表。"关键词": ["替换为", 0]
 var countries = {
   
